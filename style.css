@@ -1,0 +1,199 @@
+html, body {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 100%;
+ 
+
+}
+
+:root {
+  --primary: #242020;
+  --accent: rgba(5, 20, 28, 0.95);
+  --text: rgba(4, 40, 102, 0.95);
+  --light: #fdfdfd;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+  font-family: "Segoe UI", sans-serif;
+ 
+}
+
+body {
+  background-image:linear-gradient(to bottom,rgba(198, 209, 222, 0.95) , rgba(117, 146, 161, 0.95) );
+  background-size: cover;
+  background-attachment: fixed;
+ 
+ 
+}
+
+
+
+/* ================= HEADER ================= */
+header {
+  position: sticky;        /* stays at top when scrolling */
+  top: 0;
+  width: 100%;
+  background: var(--accent); /* dark semi-transparent background */
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3); /* subtle shadow */
+  z-index: 1000;
+  padding: 15px 40px;
+}
+
+header nav {
+  display: flex;
+  justify-content: center; /* center the links horizontally */
+  gap: 30px;               /* space between links */
+}
+
+header nav a {
+  color: var(--light);          /* light text for contrast */
+  text-decoration: none;
+  font-weight: 600;
+  font-family: "Segoe UI", sans-serif;
+  font-size: 1.00rem;
+  padding: 8px 12px;
+  border-radius: 5px;
+  transition: 0.3s;        /* smooth hover transition */
+}
+
+header nav a:hover {
+  background: var(--light);     /* bright accent background on hover */
+  color: var(--accent);          /* dark text on hover */
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2); /* subtle glow effect */
+}
+
+/* ================= HERO ================= */
+.hero {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 90px 80px;
+  gap: 50px;
+}
+
+.hero-text h1 {
+  font-size: 3.2rem;
+  font-weight: 900;
+  color: rgba(8, 42, 61, 0.95);
+}
+
+.hero-text p {
+  margin: 20px 0;
+  max-width: 520px;
+  font-size: 1.1rem;
+  line-height: 1.6;
+  font-weight: 600;
+}
+
+.hero-buttons {
+  margin-top: 40px;
+
+}
+
+.hero-buttons a {
+  padding: 12px 25px;
+  background: var(--accent);
+  color: var(--light);
+  text-decoration: none;
+  border-radius: 10px;
+  margin-right: 15px;
+  font-weight: 600;
+  transition: 0.3s;
+  
+}
+
+.hero-buttons a:hover {
+  opacity: 0.85;
+}
+
+.hero-image img {
+  max-width: 400px;
+  border-radius: 100%;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+}
+
+/* ================= SECTIONS ================= */
+section {
+  padding: 80px;
+}
+
+.section-title {
+  font-size: 2.2rem;
+  margin-bottom: 30px;
+  color: var(--accent);
+}
+
+/* ================= ABOUT ================= */
+.about p {
+  max-width: 900px;
+  line-height: 1.7;
+  position: relative;
+  font-weight: 500;
+}
+
+/* ================= PROJECTS ================= */
+.projects-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 25px;
+}
+
+.project-card {
+  display: block;
+  text-decoration: none;   /* removes underline */
+  color: inherit;          /* prevents link blue */
+  cursor: pointer;
+
+  background: rgb(219, 229, 235);
+  padding: 25px;
+  border-radius: 12px;
+  box-shadow: 0 10px 25px rgba(13, 13, 13, 0.08);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.project-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 15px 30px rgba(13, 13, 13, 0.15);
+}
+
+.project-card h3 {
+  color: var(--primary);
+  margin-bottom: 10px;
+}
+
+/* ================= CONTACT ================= */
+.contact p {
+  margin-bottom: 10px;
+  font-size: 1.05rem;
+}
+
+.contact a {
+  color: var(--accent);
+  text-decoration: none;
+}
+
+/* ================= FOOTER ================= */
+footer {
+  text-align: center;
+  padding: 25px;
+  background: #f1f5f9;
+  font-size: 0.9rem;
+}
+
+/* ================= RESPONSIVE ================= */
+@media(max-width: 900px) {
+  .hero {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  header {
+    flex-direction: column;
+    gap: 15px;
+  }
+}
